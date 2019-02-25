@@ -4,6 +4,6 @@
 	require_once '../app/main.php';
 
 	# Controller intance
-	$begin = new Core();
+	$run = new Core();
 
 ?>
