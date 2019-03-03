@@ -40,6 +40,29 @@
 		}
 
 		public function register(){
+			if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register'])){
+				$options = ['cost' => 12];
+				$pass = password_hash(trim($_POST['user-password']), PASSWORD_BCRYPT, $options);
+				$param = [
+					'user-nick' 	=> trim($_POST['user-nick']),
+					'user-email' 	=> trim($_POST['user-email']),
+					'user-password' => $pass
+				];
+				if($this->userModel->userRecord($param)){
+					redirect('home');
+				}
+				else{
+					die("FATAL ERROR");
+				}
+			}
+			else{
+				$param = [
+					'user-name' 	=> '',
+					'user-lastname' => '',
+					'user-phone' 	=> '',
+					'user-address' 	=> ''
+				];
+			}
 
 		}
 

@@ -7,7 +7,7 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <?php if (!Controller::authenticated()) : ?>
-          <a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-sm" href="javascript:void(0);">Login</a>
+          <a class="nav-link" data-toggle="modal" data-target=".login-modal" href="javascript:void(0);">Login</a>
         <?php else :?>
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $_SESSION['user'] ?></a>
           </li>
@@ -19,3 +19,4 @@
   </div>
 </nav>
 <?php require_once APP_ROUTE . '/views/modules/login.php'; ?>
+<?php require_once APP_ROUTE . '/views/modules/register.php'; ?>
