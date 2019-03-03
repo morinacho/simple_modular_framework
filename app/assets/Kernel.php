@@ -1,6 +1,6 @@
 <?php  
 	# Mapping url
-	class Core{
+	class Kernel{
 		protected $activeController = 'Home';
 		protected $activeMethod 	= 'index';
 		protected $parameters 	    = '[]';

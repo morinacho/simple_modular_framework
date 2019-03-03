@@ -1,7 +1,7 @@
 <?php
 
 	function redirect($page){
-		header('Location:' . URL_ROUTE . $page);
+		header('location:' . URL_ROUTE . $page);
 	}
 
 ?>

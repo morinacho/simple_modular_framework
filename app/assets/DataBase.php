@@ -78,6 +78,26 @@
 		public function rowCount(){
 			return $this->stmt->rowCount();
 		}
+
+		# Delete possible injections 
+		public function deleteSpecialChars($param, $type){
+			
+			switch ($type) {
+				case 'email':
+					$filter = FILTER_SANITIZE_EMAIL;
+					break;
+				case 'int':
+					$filter = FILTER_SANITIZE_NUMBER_INT;
+					break;
+				case 'float':
+					$filter = FILTER_SANITIZE_NUMBER_FLOAT;
+					break;
+				case 'char':
+					$filter = FILTER_SANITIZE_SPECIAL_CHARS;
+					break;
+			}
+			return filter_var(htmlspecialchars(trim($param)), $filter);
+		}
 	}
 	
 ?>

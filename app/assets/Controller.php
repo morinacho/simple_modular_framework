@@ -18,6 +18,11 @@
 				die('ERROR');
 			}
 		}
+
+		public static function authenticated(){
+			session_start();
+			return (isset($_SESSION['user']));
+		}
 	}
 
 ?>
