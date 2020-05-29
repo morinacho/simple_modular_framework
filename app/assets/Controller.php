@@ -1,5 +1,5 @@
 <?php 
-	
+
 	class Controller{
 
 		# Load model
@@ -10,19 +10,23 @@
 
 		# Load view
 		public function view($view, $param = []){
-			if (file_exists('../app/views/' . $view . '.php')){
-				require_once '../app/views/' . $view . '.php';
+			session_start();
+			if(Controller::authenticated()){
+				if (file_exists('../app/views/' . $view . '.php')){
+					require_once '../app/views/' . $view . '.php';
+				}
+				else{
+					#require_once '../app/views/modules/404/index.html';
+					die('PAGE NOT FOUND');
+				}
 			}
 			else{
-				#require_once '../app/views/modules/404/index.html';
-				die('ERROR');
+				require_once '../app/views/modules/login.php';
 			}
 		}
 
 		public static function authenticated(){
-			session_start();
 			return (isset($_SESSION['user']));
 		}
 	}
-
 ?>
