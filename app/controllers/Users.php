@@ -13,9 +13,7 @@
 
 		public function store(){}
 
-		public function show(){
-
-		}
+		public function show(){}
 
 		public function edit(){}
 
