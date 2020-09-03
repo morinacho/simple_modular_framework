@@ -1,7 +1,5 @@
 <?php 
-
 	class Controller{
-
 		# Load model
 		public function model($model){
 			require_once '../app/models/' . $model . '.php';
@@ -16,12 +14,11 @@
 					require_once '../app/views/' . $view . '.php';
 				}
 				else{
-					#require_once '../app/views/modules/404/index.html';
-					die('PAGE NOT FOUND');
+					require_once '../app/views/public/404.php';
 				}
 			}
 			else{
-				require_once '../app/views/modules/login.php';
+				require_once '../app/views/public/login.php';
 			}
 		}
 

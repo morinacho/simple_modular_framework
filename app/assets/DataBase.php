@@ -1,12 +1,11 @@
-<?php 
-	
+<?php  
 	class DataBase{
 		private $host 	= DB_HOST;
 		private $user 	= DB_USER;
 		private $pass   = DB_PASSWORD;
 		private $dbname = DB_NAME;
 
-		private $dbh; #handler
+		private $dbh;  #handler
 		private	$stmt; #statement
 		private	$error;
 
@@ -80,8 +79,7 @@
 		}
 
 		# Delete possible injections 
-		public function deleteSpecialChars($param, $type){
-			
+		public function deleteSpecialChars($param, $type){ 
 			switch ($type) {
 				case 'email':
 					$filter = FILTER_SANITIZE_EMAIL;
@@ -98,6 +96,5 @@
 			}
 			return filter_var(htmlspecialchars(trim($param)), $filter);
 		}
-	}
-	
+	} 
 ?>
