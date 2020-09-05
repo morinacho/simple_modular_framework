@@ -9,6 +9,8 @@
 		# Load view
 		public function view($view, $param = []){
 			session_start();
+			require_once APP_ROUTE . '/views/modules/header.php'; 
+
 			if(Controller::authenticated()){
 				if (file_exists('../app/views/' . $view . '.php')){
 					require_once '../app/views/' . $view . '.php';
@@ -20,6 +22,8 @@
 			else{
 				require_once '../app/views/public/login.php';
 			}
+			
+			require_once APP_ROUTE . '/views/modules/footer.php'; 
 		}
 
 		public static function authenticated(){
