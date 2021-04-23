@@ -13,5 +13,5 @@
 		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/style.css">
 	</head>
 	<body style="background-color: #f2f7ff;">
-		<?php require_once APP_ROUTE . '/views/modules/nav.php'; ?>
+		<?php require_once APP_ROUTE . '/main/view/nav.php'; ?> 
 		<div class="container">

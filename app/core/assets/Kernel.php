@@ -1,7 +1,7 @@
 <?php  
 	# Mapping url
 	class Kernel{
-		protected $activeController = 'Home';
+		protected $activeController = 'Main';
 		protected $activeMethod 	= 'index';
 		protected $parameters 	    = '[]';
 
@@ -10,14 +10,14 @@
 			$url = $this->getUrl(); 
 			
 			# Seach controller and set default controller 
-			if (isset($url[0]) && file_exists('../app/controllers/' . ucwords($url[0]) . '.php')){
+			if (isset($url[0]) && file_exists('../app/'. strtolower($url[0]) .'/controller/' . ucwords($url[0]) . '.php')){
 				$this->activeController = ucwords($url[0]);
 
 				# Unset index
 				unset($url[0]);
 			} 
 			
-			require_once '../app/controllers/' . $this->activeController . '.php';
+			require_once '../app/'. strtolower($this->activeController) .'/controller/' . $this->activeController . '.php';
 			$this->activeController = new $this->activeController;
 
 			# Check method

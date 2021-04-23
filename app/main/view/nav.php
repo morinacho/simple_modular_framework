@@ -19,4 +19,3 @@
     <?php endif; ?>
   </div>
 </nav> 
-<?php require_once APP_ROUTE . '/views/public/register.php'; ?>
