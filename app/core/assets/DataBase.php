@@ -4,16 +4,16 @@
 		private $user 	= DB_USER;
 		private $pass   = DB_PASSWORD;
 		private $dbname = DB_NAME;
-		private $sdbm   = SDBM;
+		private $sdbm   = DB_MANAGEMENT;
 
 		private $dbh;  #handler
 		private	$stmt; #statement
 		private	$error;
 
-		public function __construct($sdbm = $this->sdbm, $host = $this->host, $dbname = $this->dbname, $user = $this->user, $pass = $this->pass){
+		public function __construct(){
 			# Conexion config
 			# Data origin name
-			$dsn = $sdbm .':host=' . $host . ';dbname=' . $dbname;
+			$dsn = $this->sdbm .':host=' . $this->host . ';dbname=' . $this->dbname;
 			# PDO options
 			$option = array(
 				PDO::ATTR_PERSISTENT => true,
@@ -21,7 +21,7 @@
 			); 
 
 			try {
-				$this->dbh = new PDO($dsn, $user, $pass, $option);
+				$this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
 				# Spanish 
 				$this->dbh->exec('set names utf8');
 			} 

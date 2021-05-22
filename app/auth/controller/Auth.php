@@ -3,7 +3,7 @@
 		private $userModel;
 
 		public function __construct(){
-			$this->userModel = $this->model('User', 'users');
+			$this->userModel = $this->model('User','users');
 			session_start(); 
 		}
 
@@ -16,12 +16,12 @@
 					
 					if(!empty($user) && password_verify($pass, $user->user_password)){
 						$_SESSION['username'] = "$user->user_name $user->user_lastname";
-						$_SESSION['userpic']  = "$user->user_img";	
+						//$_SESSION['userpic']  = "$user->user_img";	
 
-						$typeUser=$user->user_type_id;
-						switch ($typeUser) {
+						$role_id = $user->role_id;
+						switch ($role_id) {
 							case '1':
-								redirect('home');
+								redirect('main');
 								break;
 							
 							default:
@@ -72,5 +72,3 @@
         	redirect('home');
 		}
 	}
-
-?>
