@@ -1,0 +1,60 @@
+#logo-title {
+  font-size: 1.5em;
+  text-align: center;
+}
+.material-icons {
+  vertical-align: middle;
+}
+
+.btn {
+  vertical-align: middle;
+}
+
+#dashboard-lateral {
+  border-radius: 5% 0;
+  box-shadow: inset -2px 0px 20px rgb(224, 224, 224);
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
+#lateral-header {
+  text-align: center;
+}
+#lateral-header .btn-group a {
+  padding: 5px;
+  color: #5a5a5a;
+}
+
+ul#lateral-action {
+  padding: 0;
+}
+#lateral-action li {
+  margin-bottom: 12px;
+  border: none;
+  padding: 5px;
+  text-align: center;
+}
+#lateral-action li:hover {
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#lateral-action a li{
+  color: #474747;
+}
+#lateral-action a.active li {
+  color: #008996;
+}
+#lateral-action a li:hover{
+  color: #008996;
+}
+#lateral-action .material-icons {
+  padding-right: 8px;
+}
+
+#dashboard-principal {
+  background-color: #e4ecf1;
+}
+
+.control-panel{
+}

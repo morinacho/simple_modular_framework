@@ -1,0 +1,12 @@
+@import url(dashboard.css);
+
+body {
+  background-color: #dbdee3;
+}
+
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}

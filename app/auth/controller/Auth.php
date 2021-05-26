@@ -16,9 +16,9 @@
 					
 					if(!empty($user) && password_verify($pass, $user->user_password)){
 						$_SESSION['username'] = "$user->user_name $user->user_lastname";
-						//$_SESSION['userpic']  = "$user->user_img";	
-
+						
 						$role_id = $user->role_id;
+						$_SESSION['role']  = $role_id;
 						switch ($role_id) {
 							case '1':
 								redirect('main');
@@ -64,6 +64,9 @@
 				];
 			}
 
+		}
+		public function forgotPassword(){
+			$this->view("forgot-pass");
 		}
 
 		public function logout(){

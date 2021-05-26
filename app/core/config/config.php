@@ -11,9 +11,7 @@
 	define('APP_ROUTE', dirname(dirname(dirname(__FILE__))));
 
 	# URL route
-	define('URL_ROUTE', 'http://localhost/mvc-framework-template/'); # Put the url route of your site
+	define('URL_ROUTE', 'http://localhost/simple_modular_framework/'); # Put the url route of your site
 
 	# Site name
 	define('SITENAME', '_SITENAME_');  # Put the name of the site
-	
-?>

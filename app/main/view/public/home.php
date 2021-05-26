@@ -1,5 +1,3 @@
-<?php require_once APP_ROUTE . '/views/modules/header.php'; ?>
-
 <div class="row mt-5">
 	<div class="col-12 text-center mt-5">
 		<h3>Welcome to Simple Modular Framework</h3>
@@ -10,5 +8,4 @@
 
 </div>
 
-<?php require_once APP_ROUTE . '/views/modules/footer.php'; ?>
 	

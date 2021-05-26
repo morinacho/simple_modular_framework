@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta charset="utf_8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -10,8 +10,8 @@
 		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/bootstrap-grid.min.css">
 		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/bootstrap-reboot.min.css">
-		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/style.css">
+		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/bootstrap-utilities.min.css">
+		<link rel="stylesheet" href="<?php echo URL_ROUTE ?>/css/main.css">
 	</head>
-	<body style="background-color: #f2f7ff;">
-		<?php require_once APP_ROUTE . '/main/view/nav.php'; ?> 
-		<div class="container">
+	<body>
+		<div class="container-fluid">
