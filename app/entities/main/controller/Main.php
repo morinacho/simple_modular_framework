@@ -3,12 +3,17 @@
     use app\core\Controller;
     
     class Main extends Controller{
+        
+        public function __construct(){
+            parent::__construct();
+        }
+
         public function index(){
             return $this->view('home',['title' => 'Hello index']);
         }
 
-        public function contact(){
-            return $this->view('home',['title' => 'Hello contact']);
+        public function login(){
+            return $this->view('login',['title' => 'Hello contact']);
         }
     }
 ?>

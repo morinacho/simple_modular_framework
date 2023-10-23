@@ -1,0 +1,15 @@
+@import 'sets.css';
+/*
+* HEADER : NAVBAR
+*/
+.navbar{
+    background-color: rgba(0, 0, 0, .0);
+    width: 100%; 
+}
+.nav-fixed{
+    background-color: var(--light);
+    border-radius: 0 0 10px 10px;
+    position:fixed;
+    top: 0;
+    width: 97%; 
+}

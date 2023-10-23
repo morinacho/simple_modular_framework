@@ -2,11 +2,11 @@
     namespace app\core;
     
     class Controller{
-        private $class;
+        protected $class;
 
         public function __construct(){
-            $this->class = strtolower(get_class($this));
-            
+            $aux = (explode('\\', strtolower(get_class($this))));	
+            $this->class = $aux[count($aux) -1 ]; 
         }
 
         # Load view
@@ -16,18 +16,23 @@
             extract($param); # Destructuracion de array
             $route = str_replace('.','/',$route);
 
-            if(self::authenticated()){
-                if(file_exists("../resources/views/{$route}.php")){
+            if(self::authenticated()){ 
+                $file_route = $this->class === 'main' ? APP_ROUTE . "/app/entities/$this->class/views/protected/{$route}.php" : APP_ROUTE . "/app/entities/$this->class/views/{$route}.php";
+                
+                if(file_exists($file_route)){
                     ob_start();
-                    include "../resources/views/{$route}.php";
+                    require_once $file_route;
                     return ob_get_clean();
                 }
                 else{
                     return "File $route not found";     # Page not found
                 }
             }
-            else{
-                return "public Login"; #public page not login pages
+            else if ($route === 'login'){
+                require_once(APP_ROUTE . '/app/entities/main/views/public/login.php');
+            }
+            else{    
+                require_once(APP_ROUTE . '/app/entities/main/views/public/home.php'); #public page not login pages
             }
         }
 

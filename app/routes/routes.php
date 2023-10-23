@@ -5,7 +5,7 @@
 
     Router::get('/', [Main::class, 'index']);
 
-    Router::get('/contact', [Main::class, 'contact']); 
+    Router::get('/login', [Main::class, 'login']); 
 
     Router::get('/crear/:slug', function($slug){
         return "slug $slug bitchs";

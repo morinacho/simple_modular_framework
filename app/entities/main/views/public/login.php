@@ -1,6 +1,6 @@
 <?php
     require_once 'components/top.php';
     require_once 'components/header.php';
-    require_once 'components/main.php';
+    echo '<br><br><br>LOGIN';
     require_once 'components/bottom.php';
 ?>
