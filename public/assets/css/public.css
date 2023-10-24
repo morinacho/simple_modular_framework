@@ -1,4 +1,5 @@
 @import 'sets.css';
+@import url('public-mobile.css');
 /*
 * HEADER : NAVBAR
 */
@@ -6,10 +7,18 @@
     background-color: rgba(0, 0, 0, .0);
     width: 100%; 
 }
-.nav-fixed{
+.nav-fixed, .nav-fixed-mobile{
     background-color: var(--light);
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 15px 15px;
+    opacity: 0.6;
+    padding: 0 10px ;
     position:fixed;
-    top: 0;
-    width: 97%; 
+    top: 0; 
+}
+.nav-fixed:hover, .nav-fixed-mobile:hover{
+    opacity: 1;
+}
+
+.nav-fixed-mobile{
+    width: 97%;
 }
