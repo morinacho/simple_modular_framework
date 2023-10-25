@@ -14,19 +14,19 @@
                         <a class="nav-link active" aria-current="page" href="<?php echo URL_ROUTE; ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Overview</a>
+                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>#overview">Overview</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Testimonial</a>
+                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>#testimonial">Testimonial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>#contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo URL_ROUTE; ?>login">Login</a>

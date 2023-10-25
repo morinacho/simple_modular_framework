@@ -29,10 +29,14 @@
                 }
             }
             else if ($route === 'login'){
-                require_once(APP_ROUTE . '/app/entities/main/views/public/login.php');
+                require_once APP_ROUTE . '/app/entities/main/views/public/login.php';
             }
-            else{    
-                require_once(APP_ROUTE . '/app/entities/main/views/public/home.php'); #public page not login pages
+            else{
+                # Public page
+                require_once APP_ROUTE . '/app/entities/main/views/public/components/top.php';
+                require_once APP_ROUTE . '/app/entities/main/views/public/components/header.php';
+                require_once APP_ROUTE . '/app/entities/main/views/public/index.php'; 
+                require_once APP_ROUTE . '/app/entities/main/views/public/components/bottom.php';
             }
         }
 

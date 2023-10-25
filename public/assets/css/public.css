@@ -5,6 +5,7 @@
 */
 .navbar{
     background-color: rgba(0, 0, 0, .0);
+    transition: ease-in;
     width: 100%; 
 }
 .nav-fixed, .nav-fixed-mobile{
@@ -16,9 +17,52 @@
     top: 0; 
 }
 .nav-fixed:hover, .nav-fixed-mobile:hover{
-    opacity: 1;
+    opacity: 1; 
 }
 
 .nav-fixed-mobile{
     width: 97%;
+}
+/*
+* MAIN
+*/
+#home, #about, #overview, #features, #testimonial, #contact{
+    height: 100vh; 
+}
+/*
+* MAIN : HOME
+*/
+#home{ 
+    background-color: red;
+}
+
+/*
+ * MAIN : ABOUT
+*/
+#about{
+    background-color: yellow;
+}
+/*
+ * MAIN : OVERVIEW
+*/
+#overview{
+    background-color: green;
+}
+/*
+ * MAIN : FEATURES
+*/
+#features{
+    background-color: blue;
+}
+/*
+ * MAIN : TESTIMONIAL
+*/
+#testimonial{
+    background-color: rgb(211, 137, 0);
+}
+/*
+ * MAIN : CONTACT
+*/
+#contact{
+    background-color: rgb(255, 9, 235);
 }

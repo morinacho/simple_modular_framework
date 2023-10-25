@@ -9,7 +9,7 @@
         }
 
         public function index(){
-            return $this->view('home',['title' => 'Hello index']);
+            return $this->view('index',['title' => 'Hello index']);
         }
 
         public function login(){
