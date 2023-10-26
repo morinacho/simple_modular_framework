@@ -1,15 +1,9 @@
 <?php
-    use app\core\Router;
-    use app\entities\main\controller\Main;
-
-
-    Router::get('/', [Main::class, 'index']);
-
-    Router::get('/login', [Main::class, 'login']); 
-
-    Router::get('/crear/:slug', function($slug){
-        return "slug $slug bitchs";
-    });
-
-    Router::dispatch();
+    use app\core\Router; 
+    
+    require_once 'auth.php';
+    require_once 'main.php';
+    
+    Router::dispatch(); 
+    
 ?>

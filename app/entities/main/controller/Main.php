@@ -12,6 +12,8 @@
             return $this->view('index',['title' => 'Hello index']);
         }
 
+       
+
         public function login(){
             return $this->view('login',['title' => 'Hello contact']);
         }

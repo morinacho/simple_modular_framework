@@ -29,7 +29,7 @@
                         <a class="nav-link" href="<?php echo URL_ROUTE; ?>#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>login">Login</a>
+                        <a class="nav-link" href="<?php echo URL_ROUTE; ?>sign_in">Sign In</a>
                     </li>
                 </ul>
             </div>

@@ -12,8 +12,13 @@
 			session_start(); 
 		}
 
+		public function sign_in(){
+            return $this->view('login',['title' => 'Nup - Sign in']);
+        }
+
         public function login(){
-			if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
+			return "login";
+			/* if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])){
 				if(isset($_POST['user-email']) && isset($_POST['user-password'])){
 					$email = $_POST['user-email'];
 					$pass  = $_POST['user-password'];
@@ -26,14 +31,12 @@
 						header("Location:".URL_ROUTE);	
 					}
 				}
-			} 		
+			} 	 */	
 		} 
 
         public function logout(){
 			session_unset();
             session_destroy(); 
 		}
-
-        
     }
 ?>
