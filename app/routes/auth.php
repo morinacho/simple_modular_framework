@@ -6,4 +6,6 @@
 
     Router::post('/login', [Auth::class, 'login']);
 
+    Router::get('/forgot_password', [Auth::class, 'forgot_password']);
+
 ?>

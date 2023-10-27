@@ -28,8 +28,11 @@
                     return "File $route not found";     # Page not found
                 }
             }
-            else if ($route === 'login'){
-                require_once APP_ROUTE . '/app/entities/main/views/public/login.php';
+            else if ($route === 'login' or $route === 'forgot_password'){
+                require_once APP_ROUTE . '/app/entities/main/views/public/components/top.php';
+                require_once APP_ROUTE . '/app/entities/main/views/public/components/header.php';
+                require_once APP_ROUTE . "/app/entities/main/views/public/$route.php";
+                require_once APP_ROUTE . '/app/entities/main/views/public/components/bottom.php';
             }
             else{
                 # Public page

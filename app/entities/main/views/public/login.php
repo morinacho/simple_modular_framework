@@ -1,4 +1,3 @@
-<?php require_once 'components/top.php'; require_once 'components/header.php';?> 
 <section class="row justify-content-center mt-5" id="login">
     <div class="col-xs-8 col-sm-10 col-md-8 col-lg-6 col-xl-4">
         <div class="card">
@@ -22,9 +21,8 @@
                     </div>
                 </form>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-center mt-3" href=" auth/forgotPassword">¿Olvidaste tu contraseña?</a>
+                <a class="dropdown-item text-center mt-3" href="<?php echo URL_ROUTE;?>forgot_password">¿Olvidaste tu contraseña?</a>
             </div>
         </div>
     </div>
 </section>
-<?php require_once 'components/bottom.php';?>
