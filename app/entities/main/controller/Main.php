@@ -11,11 +11,5 @@
         public function index(){
             return $this->view('index',['title' => 'Nup - Home']);
         }
-
-       
-
-        public function login(){
-            return $this->view('login',['title' => 'Hello contact']);
-        }
     }
 ?>

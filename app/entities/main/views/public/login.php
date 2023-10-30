@@ -8,7 +8,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text material-icons">person</div>
                         </div>
-                        <input type="email" class="form-control" id="username" name="user-email" placeholder="example@email.com">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="example@email.com">
                     </div>
                     <div class="input-group mb-4">
                         <div class="input-group-prepend">
@@ -25,4 +25,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> 

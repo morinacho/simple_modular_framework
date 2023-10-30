@@ -2,6 +2,7 @@
     --primary: #7752FE;
     --secundary: #8E8FFA;
     --light: #C2D9FF;
+    --very-light: #f3f7ff;
     --dark: #190482;
     --white: #ffffff;;
     --black: #000000;
@@ -9,3 +10,7 @@
     --md: 16px;
     --lg: 18px;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+/*bg-body-tertiary*/

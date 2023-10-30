@@ -23,6 +23,10 @@
 .nav-fixed-mobile{
     width: 97%;
 }
+.nav-link .active{
+    color: red !important;
+
+}
 /*
 * MAIN
 */
@@ -33,7 +37,7 @@
 * MAIN : HOME
 */
 #home{ 
-    background-color: red;
+    background-color: var(--very-light);
 }
 
 /*

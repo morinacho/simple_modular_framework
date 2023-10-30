@@ -45,12 +45,12 @@ CREATE TABLE people.contacts(
 ALTER TABLE people.contacts ADD CONSTRAINT contacts_personal_information_id_fkey FOREIGN KEY (personal_information_id) REFERENCES people.personal_information(id);
 ALTER TABLE people.contacts ADD CONSTRAINT contacts_contact_type_id_fkey FOREIGN KEY (contact_type_id) REFERENCES people.contacts_types(id);
 
-
 CREATE TABLE people.countries(
     id serial4 NOT NULL,
     name VARCHAR(250),
     CONSTRAINT countries_pkey PRIMARY KEY (id)
 );
+
 CREATE TABLE people.provinces( 
     id serial4 NOT NULL,
     name VARCHAR(200),
@@ -58,7 +58,6 @@ CREATE TABLE people.provinces(
     CONSTRAINT provinces_pkey PRIMARY KEY (id)
 );
 ALTER TABLE people.provinces ADD CONSTRAINT provinces_country_id_fkey FOREIGN KEY (country_id) REFERENCES people.countries(id);
-
 
 CREATE TABLE people.cities(
     id serial4 NOT NULL,
@@ -89,7 +88,7 @@ CREATE TABLE people.users(
     username VARCHAR(250),
     password VARCHAR(250),
     token VARCHAR(250),
-    users_roles_id serial4 NOT NULL,
+    user_rol_id serial4 NOT NULL,
     personal_information_id serial4 NOT NULL,
     CONSTRAINT user_pkey PRIMARY KEY (id)
 );

@@ -45,9 +45,7 @@
                     return;
                 }
             } 
-
             echo "404: $uri not found";            
-            # echo $_SERVER['SERVER_NAME']; <= Muestra el nombre del servidor, para aplicar en la direccion de la app
         }
     }
 ?>
